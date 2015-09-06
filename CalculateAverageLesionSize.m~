@@ -11,12 +11,11 @@
 % Ex: % dataFolder='/Users/Piotr/Documents/MATLAB_data/data/LionTrack/SourcesNewROI/angular/';
 
 %% References
-% Piotr PATER, McGill University , 
-% date: 6/09/2015
+% Piotr PATER
      
 function [SSBLesionSizes,DSBLesionSizes,simNames]=CalculateAverageLesionSize(dataFolder)
 
-    e2=dir([strcat(dataFolder) '*MeV*']); % find all data files in the folder which have to contain a * MeV* in the name
+    e2=dir([strcat(dataFolder) '*MeV*']);
     nSimulations=size(e2,1);
     simNames=cell(nSimulations,1);
     SSBLesionSizes=simNames;DSBLesionSizes=simNames;
@@ -47,4 +46,5 @@ function [SSBLesionSizes,DSBLesionSizes,simNames]=CalculateAverageLesionSize(dat
     end
     SSBLesionSizes=cell2mat(SSBLesionSizes);
     DSBLesionSizes=cell2mat(DSBLesionSizes);
+
 end
